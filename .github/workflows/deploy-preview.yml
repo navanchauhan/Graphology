@@ -9,4 +9,4 @@ jobs:
         with:
           zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
-          now-args: '--prod' #Optional 
+          now-args: '--yes' #Optional 
