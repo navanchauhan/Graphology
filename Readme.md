@@ -1,4 +1,4 @@
-# Handwriting Analysis using Graphology & Machine Learning
+# Graphology Using Machine Learning
 
 **Preview:** https://graphology.navanchauhan.now.sh ( CI Deployment using Zeit Now )
 Graphology is the study of human personality through writing. It is a projective personality test, that let us know diverse personality traits.
