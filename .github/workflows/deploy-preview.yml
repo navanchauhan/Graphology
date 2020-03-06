@@ -1,15 +1,11 @@
-name: Deploy Website Preview
+name: deploy website
 on: [pull_request]
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: deploy now
-        env:
-          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
-        run: now -y --no-clipboard -t ${ZEIT_TOKEN} -m commit=${GITHUB_SHA} -m branch=${GITHUB_REF}
+      - uses: actions/checkout@v2
       - uses: navanchauhan/zeit-now-deploy@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ZEIT_TOKEN: ${{ secrets.ZEIT_TOKEN }}
+        with:
+          zeit-token: ${{ secrets.ZEIT_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
